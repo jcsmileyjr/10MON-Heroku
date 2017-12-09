@@ -48,4 +48,4 @@ app.post('/weighIn', function (req, res){
 })
 //app.listen(3000);
 //got tip regarding error from: https://stackoverflow.com/questions/15693192/heroku-node-js-error-web-process-failed-to-bind-to-port-within-60-seconds-of
-app.listen('port', (process.env.PORT || 5000));
+app.listen(process.env.PORT || 5000);
