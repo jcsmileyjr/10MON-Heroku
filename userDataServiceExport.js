@@ -9,6 +9,7 @@ const mongoose = require('mongoose');
 //test with mongodb://example:example@ds053312.mongolab.com:53312/todolist
 //var uristring = process.env.MONGODB_URI;
 
+	var uristring =process.env.DEV_DATABASE_CONNECTION;
 
 	const playerSchema = new mongoose.Schema({
 		  name: 		String,
