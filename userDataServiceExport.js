@@ -73,6 +73,20 @@ const mongoose = require('mongoose');
     var updateUserData = function(x){
         //transform the userData json into a string
         newUserData = JSON.stringify(x);
+console.log(newUserData);
+		
+		Player.findOne({"name":newUserData.name}, function(err, result){
+			if (err)
+				console.log(err);
+			else {
+				Player.save(function (err, Player){
+					if (err)
+						console.log(err);
+					else
+						console.log("saved");
+				});
+			}
+		});
             
         //writes the new string object to the userData.json
         fs.writeFileSync(userDataPath, newUserData, 'utf8'); 

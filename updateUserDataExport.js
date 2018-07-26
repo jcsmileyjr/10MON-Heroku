@@ -34,7 +34,7 @@
                     /*resets current user lastUpdate attribute*/    
                     userData[i].lastUpdate = today;
 
-                    userInfo.updateUserData(userData);                        
+                    userInfo.updateUserData(userData[i]);                        
                     //to update CurrentWeightLoss Service on Client  
                     returnCurrentWeightLoss = userData[i].weightLoss; 
 
