@@ -4,15 +4,16 @@
     var userInfo = require('./userDataServiceExport');
     var Time = require('./timeExport');
 
-    var userData = userInfo.players();
+    //var userData = userInfo.players();
     var newArray = [];
     var UpdateDate = Time.todayDate();
     var oneDay = Time.minutesInADay();
     
     var weightLessArray = function(userName){
+		/*get the players data from the database*/
+		var userData = userInfo.players();
         /*get the current user name at the time the method is called*/
-        var currentUser = userName;        
-
+        var currentUser = userName;
         /*loops throught the userData array*/
         for(var j=0; j<userData.length;j++){
             //create a new date object

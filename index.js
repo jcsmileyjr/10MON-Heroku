@@ -2,6 +2,12 @@ const express = require('express');
 const app = express();
 const fs = require('fs');
 
+//loads .env variables to be use as process.env
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').load();
+}
+const mongodb = require('mongodb');
+
 //send the entire Monster folder to the client
 app.use(express.static(__dirname + '/Monster'));
 
@@ -36,7 +42,7 @@ app.post('/cred', function(req, res){
 
 var updateUser = require('./updateUserDataExport');
 app.post('/weighIn', function (req, res){
-    
+console.log("weighIn is being called");    
     //get the username and new weight
     var userName = req.body.name;
     var weight = req.body.weight;
