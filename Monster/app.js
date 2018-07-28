@@ -54,8 +54,18 @@ app.config(['$stateProvider', '$urlRouterProvider',function($stateProvider, $url
 
         })
 	
+        //The about state redirects the user to the about.html template via the /about url. 
+
+        .state('about', {
+
+            url:'/about',
+
+            templateUrl: 'views/about.html'
+
+        })		
+	
 }]);
-/*
+
 	app.run(function($transitions, Cred) {
 
 		  $transitions.onStart({ to: 'weighIn'}, function(trans) {
@@ -87,4 +97,3 @@ app.config(['$stateProvider', '$urlRouterProvider',function($stateProvider, $url
 		    }
 		}); 
 	})	
-    */

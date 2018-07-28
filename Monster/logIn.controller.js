@@ -1,4 +1,4 @@
-app.controller('logInController', function($scope, $state, Cred, SetView, NewUser, NewArray, CurrentWeightLoss){
+app.controller('logInController', function($scope, $state, Cred, SetView, NewUser, NewArray, CurrentWeightLoss, RandomQuote){
    
         //callback function used in the logIn function below. If the data sent from the server is successfully received, this function use it to update the newArray array and switch to the weighIn page. If the data is not received, then the user remain on the login page and received fail messages. 
         $scope.returnData = function(x){
@@ -43,4 +43,8 @@ app.controller('logInController', function($scope, $state, Cred, SetView, NewUse
 	        Cred.logInfo(userName, pwd, $scope.returnData);
     
 		}/*end of for logIn Function*/
+    
+		/*sets the random quote variable on the weighIn page from the RandomQuote service*/
+    	$scope.randomQuote = RandomQuote.getQuote();			
+		
 });
