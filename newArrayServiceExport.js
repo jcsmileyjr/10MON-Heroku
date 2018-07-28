@@ -1,5 +1,5 @@
 /* A service placed the shared resource userData array into the newArray variable without the players weight and only the current user percent weight loss. Several services is called to get shared resources userData array, current user name, today's date, and the minutes of a day. */
-// need to import UserData, Time and Newuser
+
 
     var userInfo = require('./userDataServiceExport');
     var Time = require('./timeExport');

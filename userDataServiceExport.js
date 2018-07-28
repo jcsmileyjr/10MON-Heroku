@@ -1,7 +1,6 @@
 /*service to retreive and update the userData array information from an online database.*/
 
 const fs = require('fs');
-
 const mongoose = require('mongoose');
 
 	//enviromental string used to save the connnection to the database during testing
