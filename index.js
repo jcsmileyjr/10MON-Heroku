@@ -41,8 +41,7 @@ app.post('/cred', function(req, res){
 });
 
 var updateUser = require('./updateUserDataExport');
-app.post('/weighIn', function (req, res){
-console.log("weighIn is being called");    
+app.post('/weighIn', function (req, res){  
     //get the username and new weight
     var userName = req.body.name;
     var weight = req.body.weight;
@@ -52,6 +51,6 @@ console.log("weighIn is being called");
     info.newArray = newArray.weightLessArray(userName);
     res.send(info);
 })
-//app.listen(3000);
+
 //got tip regarding error from: https://stackoverflow.com/questions/15693192/heroku-node-js-error-web-process-failed-to-bind-to-port-within-60-seconds-of
 app.listen(process.env.PORT || 5000);
