@@ -3,11 +3,9 @@
 const fs = require('fs');
 
 const mongoose = require('mongoose');
-//test with mongodb://example:example@ds053312.mongolab.com:53312/todolist
-//var uristring = process.env.MONGODB_URI;
 
-	//enviromental string used to save the connnection to the database
-	var uristring =process.env.DEV_DATABASE_CONNECTION;
+	//enviromental string used to save the connnection to the database during testing
+	var uristring =process.env.MONGODB_URI;
 	
 	//creates a schema that is use to form a database
 	const playerSchema = new mongoose.Schema({

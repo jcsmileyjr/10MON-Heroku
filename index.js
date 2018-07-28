@@ -41,8 +41,7 @@ app.post('/cred', function(req, res){
 });
 
 var updateUser = require('./updateUserDataExport');
-app.post('/weighIn', function (req, res){
-console.log("weighIn is being called");    
+app.post('/weighIn', function (req, res){  
     //get the username and new weight
     var userName = req.body.name;
     var weight = req.body.weight;
