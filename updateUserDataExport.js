@@ -4,15 +4,15 @@
 
     var userInfo = require('./userDataServiceExport');
     var Time = require('./timeExport');
-    
-    /*gets the current userData array from the UserData service*/
-    var userData = userInfo.players();
     var today = Time.todayDate();
-
     var returnCurrentWeightLoss = "";
 
     /*method to update the current user, then use UserData service to update the userData array*/
     var updateUser = function(weight, userName){
+		
+	/*gets the current userData array from the UserData service*/	
+    var userData = userInfo.players();
+		
         /*gets the current user name*/
         var currentUser = userName;
 
