@@ -19,6 +19,7 @@ input, label {
 input {
         border-style: groove;        
         border-color: black;
+		//box-shadow: 1px 1px #5E5E5E; /*dark shadow under the button*/
 }
 
 /* sets a different border for reset buttons from the regular input buttons on the logIn and weighIn pages*/
@@ -35,6 +36,7 @@ input {
     font-weight: normal;
     font-weight: bolder;
     font-size: 110%;
+	box-shadow: 1px 1px #5E5E5E; /*dark shadow under the button*/
 }
 /*
 .btn {
