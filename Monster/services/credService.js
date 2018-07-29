@@ -6,7 +6,6 @@ app.service('Cred', function($http){
         this.logInfo = function(username, pwd, callback){           
             var info = {"name": username, "password": pwd};
             $http.post('/cred',info).then(function (response){
-                //cred = response.data;
                 cred = callback(response.data);
             })
                 return cred;
