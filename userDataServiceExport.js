@@ -12,7 +12,8 @@ const mongoose = require('mongoose');
 		  startWeight:	Number,
 		  weightLoss: 	Number,
 		  lastUpdate:	Date,
-		  winner:		Boolean	
+		  winner:		Boolean,
+		  groupID:		String
 	});
 
 	//need to avoid a error
@@ -64,6 +65,7 @@ const mongoose = require('mongoose');
 			newUser.weightLoss = user.weightLoss;
 			newUser.lastUpdate = user.lastUpdate;
 			newUser.winner = user.winner;
+			newUser.groupID = user.groupID;
 			
 			newArray[index]= newUser;
 		});
