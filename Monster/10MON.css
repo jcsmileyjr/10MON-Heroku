@@ -147,3 +147,11 @@ footer {
     }
 }
 
+    /* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 357px) {
+    /* in mobile view, move login labels to far left */ 
+    .labelLeft {
+        text-align: left;
+    }
+}
+

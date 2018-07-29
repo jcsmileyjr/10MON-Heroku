@@ -3,7 +3,8 @@
                     <!--Login Name input area -->
                     <!--The message variable states log-in failure -->
                     <br><br><p class="redColor">{{message}}</p>
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right">
+					<div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right labelLeft">
                         <label for="inputLogInName">Player Name</label>
                     </div>
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
@@ -11,8 +12,10 @@
                         <!--input field validation. Checking for if valid and if field been clicked on and left empty-->
                         <span ng-show="logInform.inputlogInName.$invalid && !logInform.inputlogInName.$pristine">Required!</span>                  
                     </div>
+					</div>	
                     <!--Login password input area -->
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right">
+					<div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right labelLeft">
                         <br>
                         <label for="inputLogInpwd">Password </label>
                     </div>
@@ -28,6 +31,7 @@
                         
                         <br>
                     </div>
+						
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 centerAlign">
                     <!--submit new suspects button "disable" till valid validation-->
                     <button type="submit" name="submit" ng-disabled="logInform.$invalid" class="btn btn-warning btn-md  submitResetButtons" ng-click="logIn(userName, userPwd)">Submit Password</button>
