@@ -12,7 +12,7 @@
     }
     /*returns the start date of the current challenge*/
     var startChallengeDate = function(){
-        var startDate = new Date("07/1/2018");
+        var startDate = new Date("07/28/2018");
         return startDate;
     }
     
