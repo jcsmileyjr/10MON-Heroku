@@ -10,6 +10,6 @@ app.service('Time', function(){
     }
     /*returns the start date of the current challenge*/
     this.startChallengeDate = function(){
-        return this.startDate = new Date("11/1/2017");
+        return this.startDate = new Date("07/1/2018");
     }
 });
